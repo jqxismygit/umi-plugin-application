@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@sensoro/applicaiton-test": "0.1.0",
+    "@sensoro/application-test": "^0.1.0"
+  },
+  "devDependencies": {}
+}
