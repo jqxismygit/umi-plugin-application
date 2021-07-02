@@ -3,7 +3,7 @@
   "main": "lib/index.js",
   "types": "types/index.d.ts",
   "description": "application",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": {
     "name": "king",
     "email": "117745900@qq.com"

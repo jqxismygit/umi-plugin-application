@@ -3,7 +3,7 @@
 import { IApi, IRoute } from '@umijs/types';
 import { join } from 'path';
 // const { register } = require('@adonisjs/require-ts');
-const DEFAULT_APP_PREFIX = '@sensoro/application-work';
+const DEFAULT_APP_PREFIX = '@sensoro/application-';
 
 // const appRoot = __dirname;
 
@@ -65,7 +65,6 @@ export default function(api: IApi) {
         if (path.startsWith('@/')) {
           const nPath = path.replace('@/', `${namespace}/lib/`);
           const index = nPath.indexOf('@sensoro/');
-          console.log('nPath.slice(index) = ', nPath.slice(index));
           return nPath.slice(index);
         } else {
           throw new Error('路由compontent暂时只支持以@/开头的路径');
