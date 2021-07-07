@@ -118,12 +118,15 @@ export default function(api: IApi) {
       }
       console.log('manifest合法...');
     }
-    const { routes: appRoutes } = checkManifest();
 
-    api.modifyRoutes(routes => {
-      return appRoutes && appRoutes?.length > 0
-        ? (routes ?? []).concat(appRoutes)
-        : routes;
-    });
+    if (api.env === 'development') {
+      const { routes: appRoutes } = checkManifest();
+
+      api.modifyRoutes(routes => {
+        return appRoutes && appRoutes?.length > 0
+          ? (routes ?? []).concat(appRoutes)
+          : routes;
+      });
+    }
   }
 }
